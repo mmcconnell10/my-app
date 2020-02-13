@@ -31,23 +31,25 @@ class App extends React.Component {
           </li>
         </ul>
         <hr />
-        
+
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/form">
-            <Form />
-          </Route>
-          <Route path="/exercise">
-            <Exercise />
-          </Route>
+          <Route path="/" component={Home} exact />
+          <Route path="/form" component={Form}/>
+          <Route path="/exercise" component={Exercise} exact />
+          <Route component={Error} />
         </Switch>
       
     </Router>
   );
 }
   }
+function Error() {
+  return (
+    <div>
+      <h2>Oops! That URL doesn't exist! Please click a link in the header to get back to where you want to go.</h2>
+    </div>
+  );
+}
 
 
 export default App;

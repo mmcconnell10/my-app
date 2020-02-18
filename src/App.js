@@ -4,6 +4,8 @@ import logo from './logo.svg';
 import Home from './home';
 import Form from './form';
 import Exercise from './exercise';
+//import Todos from './todos';
+import Counter from './counter';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
@@ -13,7 +15,7 @@ import {
   Route,
 } from "react-router-dom";
 
-
+//added this function to practice jest testing
 
 
 class App extends React.Component {
@@ -38,6 +40,7 @@ class App extends React.Component {
               <Nav.Link href="/" style={{color:'white'}}>Home</Nav.Link>
               <Nav.Link href="/form" style={{color:'white'}}>Form</Nav.Link>
               <Nav.Link href="/exercise" style={{color:'white'}}>Exercise</Nav.Link>
+              <Nav.Link href='/counter' style={{color:'white'}}>Counter</Nav.Link>
             </Nav>       
           </Navbar.Collapse>
         </Navbar>
@@ -45,7 +48,8 @@ class App extends React.Component {
             <Switch>
               <Route path="/" component={Home} exact />
               <Route path="/form" component={Form}/>
-              <Route path="/exercise" component={Exercise} exact />
+              <Route path="/exercise" component={Exercise} />
+              <Route path='/counter' component={Counter}></Route>
               <Route component={Error} />
             </Switch>
         </Router>
@@ -60,6 +64,8 @@ function Error() {
     </div>
   );
 }
+
+//              <Nav.Link href="/todos" style={{color:'white'}}>Todos</Nav.Link>              <Route path="/todos" component={Todos} />
 
 
 export default App;

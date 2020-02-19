@@ -1,4 +1,4 @@
-/*
+
 import { computed, observable } from "mobx"
 
 class Todo {
@@ -32,4 +32,3 @@ export class TodoStore {
 }
 
 export default new TodoStore
-*/

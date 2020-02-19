@@ -1,4 +1,4 @@
-/*
+
 import React from "react"
 import { observer } from "mobx-react"
 
@@ -43,4 +43,3 @@ class TodoList extends React.Component {
 }
 
 export default TodoList;
-*/

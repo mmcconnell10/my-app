@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import Home from './home';
 import Form from './form';
 import Exercise from './exercise';
-//import Todos from './todos';
+import Todos from './todos';
 import Counter from './counter';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -41,6 +41,7 @@ class App extends React.Component {
               <Nav.Link href="/form" style={{color:'white'}}>Form</Nav.Link>
               <Nav.Link href="/exercise" style={{color:'white'}}>Exercise</Nav.Link>
               <Nav.Link href='/counter' style={{color:'white'}}>Counter</Nav.Link>
+              <Nav.Link href="/todos" style={{color:'white'}}>Todos</Nav.Link>
             </Nav>       
           </Navbar.Collapse>
         </Navbar>
@@ -50,6 +51,7 @@ class App extends React.Component {
               <Route path="/form" component={Form}/>
               <Route path="/exercise" component={Exercise} />
               <Route path='/counter' component={Counter}></Route>
+              <Route path="/todos" component={Todos} />
               <Route component={Error} />
             </Switch>
         </Router>
@@ -65,7 +67,7 @@ function Error() {
   );
 }
 
-//              <Nav.Link href="/todos" style={{color:'white'}}>Todos</Nav.Link>              <Route path="/todos" component={Todos} />
+//                            
 
 
 export default App;

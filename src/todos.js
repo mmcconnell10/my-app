@@ -1,4 +1,4 @@
-/*
+
 import React from 'react';
 import TodoStore from "./todoStore"
 import TodoList from "./todoList"
@@ -12,4 +12,3 @@ function Todos() {
 }
 
 export default Todos;
-*/

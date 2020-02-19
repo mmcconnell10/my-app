@@ -24,7 +24,7 @@ class TodoList extends React.Component {
   }
 
   render() {
-    const { clearComplete, filter, filteredTodos, todos } = this.props.store
+    const { clearComplete, filter, filteredTodos } = this.props.store
 
     const todoLis = filteredTodos.map(todo => (
       <li key={todo.id}>
@@ -33,11 +33,11 @@ class TodoList extends React.Component {
       </li>
     ))
     return <div>
-      <h1>todos</h1>
-      <input className="new" onKeyPress={this.createNew.bind(this)} />
-      <input className="filter" value={filter} onChange={this.filter.bind(this)} />
+      <h1>Todo List</h1>
+      <input className="new" onKeyPress={this.createNew.bind(this)} placeholder="New Todo"/>
+      <input className="filter" value={filter} onChange={this.filter.bind(this)} placeholder="Filter Todos"/>
       <ul>{todoLis}</ul>
-      <a href="#" onClick={clearComplete}>Clear Complete</a>
+      <button onClick={clearComplete}>Clear Complete</button>
     </div>
   }
 }

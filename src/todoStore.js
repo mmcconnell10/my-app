@@ -31,4 +31,4 @@ export class TodoStore {
   }
 }
 
-export default new TodoStore
+export default new TodoStore()
